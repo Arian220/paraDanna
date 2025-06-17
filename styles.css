@@ -239,6 +239,8 @@ body {
     justify-content: center;
     z-index: 1000;
     animation: fadeIn 0.5s ease-out;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .modal.hidden {
@@ -247,12 +249,14 @@ body {
 
 .modal-content {
     background: linear-gradient(135deg, #ffeef8, #f8e8ff);
-    padding: 40px;
+    padding: 30px;
     border-radius: 20px;
     text-align: center;
-    max-width: 90%;
+    width: 90%;
+    max-width: 400px;
     position: relative;
     animation: bounceIn 0.6s ease-out;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .modal-content h2 {
@@ -365,17 +369,24 @@ body {
         min-width: 100px;
     }
     
+    .modal {
+        padding: 15px;
+    }
+    
     .modal-content {
-        padding: 25px;
-        margin: 15px;
+        padding: 20px;
+        width: 95%;
+        max-width: 350px;
     }
     
     .modal-content h2 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+        margin-bottom: 10px;
     }
     
     .modal-content p {
         font-size: 1rem;
+        line-height: 1.4;
     }
     
     .hearts-animation::before,

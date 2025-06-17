@@ -23,13 +23,24 @@ document.addEventListener('DOMContentLoaded', function() {
         const container = buttonsContainer;
         const containerRect = container.getBoundingClientRect();
         const btnRect = btnNo.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+        const viewportWidth = window.innerWidth;
         
-        // Calcular posiciones aleatorias dentro del contenedor
-        const maxX = containerRect.width - btnRect.width;
-        const maxY = containerRect.height - btnRect.height;
+        // Asegurar que el contenedor tenga una altura mínima
+        const minHeight = Math.min(200, viewportHeight * 0.3);
+        container.style.minHeight = minHeight + 'px';
         
-        const randomX = Math.random() * maxX;
-        const randomY = Math.random() * maxY;
+        // Calcular límites seguros dentro del contenedor y la pantalla
+        const containerTop = containerRect.top;
+        const containerBottom = containerRect.bottom;
+        
+        // Calcular posiciones máximas seguras
+        const maxX = Math.min(containerRect.width - btnRect.width, viewportWidth - btnRect.width - 20);
+        const maxY = Math.min(minHeight - btnRect.height, viewportHeight - containerTop - btnRect.height - 20);
+        
+        // Generar posiciones aleatorias dentro de los límites seguros
+        const randomX = Math.max(20, Math.min(Math.random() * maxX, maxX - 20));
+        const randomY = Math.max(20, Math.min(Math.random() * maxY, maxY - 20));
         
         // Aplicar la animación de movimiento
         btnNo.classList.add('moving');
