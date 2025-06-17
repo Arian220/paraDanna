@@ -141,9 +141,13 @@ body {
 /* Contenedor de botones */
 .buttons-container {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: row;
+    gap: 30px;
     align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    padding: 20px;
+    position: relative;
 }
 
 /* Estilos de botones */
@@ -151,13 +155,13 @@ body {
     font-family: 'Playfair Display', serif;
     font-size: 1.2rem;
     font-weight: 600;
-    padding: 15px 40px;
+    padding: 12px 30px;
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    min-width: 120px;
+    min-width: 100px;
     position: relative;
     overflow: hidden;
 }
@@ -361,12 +365,14 @@ body {
         height: 180px;
         margin-top: 20px;
         position: relative;
+        gap: 20px;
+        padding: 15px;
     }
     
     .btn {
-        padding: 12px 30px;
+        padding: 10px 25px;
         font-size: 1.1rem;
-        min-width: 100px;
+        min-width: 90px;
     }
     
     .modal {

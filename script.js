@@ -177,7 +177,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function adjustButtonContainer() {
         if (window.innerWidth <= 768) {
             buttonsContainer.style.position = 'relative';
-            buttonsContainer.style.height = '200px';
+            buttonsContainer.style.minHeight = '100px';
+            buttonsContainer.style.width = '100%';
         }
     }
     
