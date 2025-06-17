@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let noClickCount = 0;
     const noMessages = [
         'No',
-        '¿Estás seguro/a?',
+        '¿Estás segura?',
         'Piénsalo bien...',
         '¿En serio?',
         'Dale una oportunidad',
