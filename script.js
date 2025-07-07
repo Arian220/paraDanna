@@ -62,4 +62,3 @@ function openLetter() {
     letterSheet.classList.add("zoomIn");
   }, 1500);
 }
-
